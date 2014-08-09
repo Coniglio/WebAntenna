@@ -7,6 +7,7 @@
 package webantenna;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -19,16 +20,13 @@ public class WebAntenna extends Application {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String... args) {
         launch(args);
     }
     
     @Override
     public void start(Stage stage) throws Exception {
-        AntennaController controller = new AntennaController();
-        Scene scene = new Scene(controller);
-        stage.setScene(scene);
-        stage.getScene().setRoot(controller);
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("Antenna.fxml"))));
         stage.show();
     }
 }

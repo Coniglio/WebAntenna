@@ -6,10 +6,10 @@
 
 package webantenna;
 
-import java.io.IOException;
+import java.awt.Button;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.fxml.FXMLLoader;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 
@@ -20,8 +20,8 @@ import javafx.scene.layout.AnchorPane;
  */
 public class AntennaController extends AnchorPane implements Initializable {
     
-    public AntennaController() {
-    }
+    @FXML
+    private Button addButton;
 
     /**
      * Initializes the controller class.
@@ -30,12 +30,5 @@ public class AntennaController extends AnchorPane implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-    }
-    
-    private void loadFXML() throws IOException {
-        FXMLLoader loader = new FXMLLoader(WebAntenna.class.getResource("Antenna.fxml"));
-        loader.setRoot(this);
-        loader.setController(this);
-        loader.load();
     }
 }
